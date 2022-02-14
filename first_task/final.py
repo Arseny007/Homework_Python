@@ -29,8 +29,8 @@ if test_flag:
     print('my test cases')
     data_empty = []
     print(solution(data_empty, 'Center', 9))
-    data = ['0', '1', '2', '3', '4']
-    print(solution(data, 'right', 9, '!'))
+    data = ['0', '1', '2']
+    print(solution(data, 'bright', 9, '!'))
     print(solution(data, 'right', 1, '$'))
     print(solution(data, 'center', 20, '*'))
     print(solution(data, 'center', 3))
