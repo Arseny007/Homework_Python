@@ -6,6 +6,7 @@ class Washing:
         print(f"I'm washing {item} with {self.water} l of water")
 
 class Driving:
+    @staticmethod
     def drive(a, b):
         print(f"Я везу из {a} в {b}")
 
@@ -17,8 +18,9 @@ class Machine:
         self.color = color
 
 class Washing_Machine(Washing, Machine):
-    def washing_machine():
-        pass
+    def __init__(self, water, brand, price, year, color):
+        Washing.__init__(self, water)
+        Machine.__init__(self, brand, price, year, color)
     
 
 class Driving_Machine(Driving, Machine):
