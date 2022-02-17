@@ -31,5 +31,5 @@ car_1 = Driving_Machine
 car_1.drive('gag', 'aga')
 car_1.price = 300
 print(car_1.price)
-wash_b = Washing_Machine(5)
+wash_b = Washing_Machine(5, 'ferrari', 500, 2019, 'red')
 wash_b.wash('item')

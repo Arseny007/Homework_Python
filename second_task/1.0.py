@@ -1,6 +1,4 @@
-from audioop import reverse
 from random import choice
-from operator import attrgetter
 
 class Car:
     def __init__(self, speed:int, name):
