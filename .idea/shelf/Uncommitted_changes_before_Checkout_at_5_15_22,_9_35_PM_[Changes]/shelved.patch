@@ -1,0 +1,64 @@
+Index: 02.03.22/02.03.22.1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import os\n\n# def func(file):\n#     result, names = [], []\n#     obj = os.stat(file)\n#     result.append(obj.st_uid)\n#     result.append(obj.st_gid)\n#     result.append(obj.st_mtime)\n#     result.append(obj.st_size)\n\n#     return result, names\n\n# # func('/home/arseny/fileee.txt')\n\n# def print_sorted(direc):\n#     files = os.listdir(direc)\n#     dict_files = {}\n#     for fn in files:\n#         dict_files[fn] = (os.stat(direc + '/' + fn)).st_mtime\n#     # dict_filess = {fn:(os.stat(fn)).st_mtime for fn in files}\n#     items = dict_files.items()\n#     items = sorted(items, key = lambda x: x[1])\n#     for pair in items:\n#         print(pair[0])\n\n# print_sorted(\"/home/arseny/papka1\")\n\nsum = 0\nfor i in range(1, 100):\n    sum += 100 / (i**(i+1))\n\nprint(sum)
+===================================================================
+diff --git a/02.03.22/02.03.22.1.py b/02.03.22/02.03.22.1.py
+--- a/02.03.22/02.03.22.1.py	
++++ b/02.03.22/02.03.22.1.py	
+@@ -1,32 +1,26 @@
+-# import os
+-
+-# def func(file):
+-#     result, names = [], []
+-#     obj = os.stat(file)
+-#     result.append(obj.st_uid)
+-#     result.append(obj.st_gid)
+-#     result.append(obj.st_mtime)
+-#     result.append(obj.st_size)
++import os
+ 
+-#     return result, names
++def func(file):
++    result, names = [], []
++    obj = os.stat(file)
++    result.append(obj.st_uid)
++    result.append(obj.st_gid)
++    result.append(obj.st_mtime)
++    result.append(obj.st_size)
+ 
+-# # func('/home/arseny/fileee.txt')
++    return result, names
+ 
+-# def print_sorted(direc):
+-#     files = os.listdir(direc)
+-#     dict_files = {}
+-#     for fn in files:
+-#         dict_files[fn] = (os.stat(direc + '/' + fn)).st_mtime
+-#     # dict_filess = {fn:(os.stat(fn)).st_mtime for fn in files}
+-#     items = dict_files.items()
+-#     items = sorted(items, key = lambda x: x[1])
+-#     for pair in items:
+-#         print(pair[0])
++# func('/home/arseny/fileee.txt')
+ 
+-# print_sorted("/home/arseny/papka1")
+-
+-sum = 0
+-for i in range(1, 100):
+-    sum += 100 / (i**(i+1))
++def print_sorted(direc):
++    files = os.listdir(direc)
++    dict_files = {}
++    for fn in files:
++        dict_files[fn] = (os.stat(direc + '/' + fn)).st_mtime
++    # dict_filess = {fn:(os.stat(fn)).st_mtime for fn in files}
++    items = dict_files.items()
++    items = sorted(items, key = lambda x: x[1])
++    for pair in items:
++        print(pair[0])
+ 
+-print(sum)
+\ No newline at end of file
++print_sorted("/home/arseny/papka1")
+\ No newline at end of file
