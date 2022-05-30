@@ -8,7 +8,7 @@ do
     echo "$line" >> sha_log_info.txt
     elif [ $(( $count % 2 )) -eq 0 ]
     then
-    echo "$line" | sha256sum >> sha_log_info.txt
+    echo "$line" | sha256sum |sed's /.$//' >> sha_log_info.txt 
     fi
     count=$(( $count + 1 ))
 done
