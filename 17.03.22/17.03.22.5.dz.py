@@ -1,13 +1,15 @@
-import os, tarfile
+import sys, os, tarfile, argparse
 
-def archivator(path):
-    t = tarfile.open(path + 'arcvhive.tar.gz', 'w|gz')
-    obj = os.walk(path)
-    for ff in obj:
-        for folder in ff[1]:
-            t.add(folder)
-        for file in ff[2]:
-            t.add(file)
-    t.close()
+parser = argparse.ArgumentParser()
+parser.add_argument('--directory', '-dir')
+parser.add_argument('--archive', '-ar', default='archive.tar.gz')
+args = parser.parse_args(sys.argv[1:])
 
-archivator('/home/arseny/papka1')
+def archivator(args):
+    tar = tarfile.open(args.archive, 'w|gz')
+    for root, d, files in os.walk(args.directory):
+        for file in files:
+            tar.add(os.path.join(root, file))
+    tar.close()
+
+archivator(args)
