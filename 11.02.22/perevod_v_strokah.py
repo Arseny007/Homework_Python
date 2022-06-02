@@ -1,0 +1,1 @@
+print('int: {0:d} hex: {0:x} oct: {0:o}'.format(40))
