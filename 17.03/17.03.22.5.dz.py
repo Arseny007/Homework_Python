@@ -1,5 +1,7 @@
 import sys, os, tarfile, argparse
 
+# принимает путь от корня до целевой папки, где нужно все заархивировать
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--directory', '-dir')
 parser.add_argument('--archive', '-ar', default='archive.tar.gz')
