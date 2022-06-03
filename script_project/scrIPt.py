@@ -15,9 +15,16 @@ while True:
         ipaddr = ipaddress.IPv4Network(f"0.0.0.0/{input('введи цифру от 0 до 32 чтобы увидеть маску: ')}")
         print("\nмаска: ", ipaddr.netmask)
     elif ans == '2':
-        just_ip = os.popen('ip a s wlp1s0 | grep "inet " | cut -c 9- | cut --complement -d " " -f 1 | cut -d " " -f 1').read()[:-1]
+        interface = 'wlp1s0'
+        # intlist = os.popen('ip a | grep "mtu" | cut -d " " -f 2').read().splitlines()
+        # print("\nВведите цифру интерфейса, для которого хотите увидеть информацию: ")
+        # [print(f"{i + 1})", intlist[i][:-1]) for i in range(len(intlist)) if
+        #  intlist[i][:-1] in ['eth0', 'eth1', 'eth2', 'wlp1s0', 'docker0']]
+        # interface = intlist[int(input()) - 1][:-1]
+        just_ip = os.popen(f'ip a s {interface} | grep "inet " | cut -c 9- | cut --complement -d " " -f 1 | cut -d " " -f 1').read()[:-1]
         yoip = ipaddress.IPv4Network(just_ip, False)
-        print("\nТвои адрес, маска и сеть:", *just_ip.split("/"), yoip.network_address)
+        print(f"\nадрес, маска и сеть для {interface}:", *just_ip.split("/"),
+              yoip.network_address)
     elif ans == '3':
         print("\nтвой внешний ip: ", os.popen("curl -s ifconfig.me/ip").read())
     elif ans == '4':
