@@ -52,8 +52,8 @@ while true; do
         echo $(netmask $mask) ;;
         2) ip=$(ip a s wlp1s0 | grep "inet " | cut -c 9- | cut --complement -d " " -f 1 | cut -d " " -f 1)
         { IFS=/ read addr mask; } <<< $ip
-        netaddr= $( network $addr $mask)
-        echo "Твои адрес, маска и сеть:" $addr $netaddr $mask ;;
+#        netaddr=$(network $addr $mask)
+        echo "Твои адрес, маска и сеть:" $addr $mask $(network $addr $mask) ;;
         3) echo "Твой внешний адрес" $(curl -s ifconfig.me/ip) ;;
         4) echo "введи адрес и маску (0-32) для расчета через пробел"
           read addr mask
