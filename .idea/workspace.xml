@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ba435e5-53da-4d88-b66a-aa3189e104d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/findscript.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.04.22/11.04.22.1.passhash.sh" beforeDir="false" afterPath="$PROJECT_DIR$/11.04.22/11.04.22.1.passhash.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.04.22/log_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/11.04.22/log_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11.04.22/sha_log_info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/11.04.22/sha_log_info.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/17.03.22/17.03.22.5.dz.py" beforeDir="false" afterPath="$PROJECT_DIR$/17.03.22/17.03.22.5.dz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/17.03.22/archive.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/17.03.22/file.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/17.03.22/filetar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.04.22/new_log_info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.04.22/new_sha_log_info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.04.22/file" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/19.03.22/try/socketclient.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/19.03.22/try/socketserver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/19.03.22/try/text.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/arseny/Homework_Python",
+    "last_opened_file_path": "/home/arseny/HomeworkPython/Homework_Python",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +73,7 @@
       <workItem from="1654066821755" duration="1099000" />
       <workItem from="1654102898604" duration="5635000" />
       <workItem from="1654111317534" duration="23916000" />
+      <workItem from="1654453530982" duration="11090000" />
     </task>
     <servers />
   </component>
